@@ -1,1 +1,2 @@
-# Membership Management System -  48024 Applications Programming Assignment 2
+# Membership Management System 
+48024 Applications Programming Assignment 2
