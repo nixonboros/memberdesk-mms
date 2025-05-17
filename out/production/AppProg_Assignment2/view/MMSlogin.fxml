@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="controller.MMSLoginController" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="300.0" prefWidth="400.0">
+    <GridPane>
+        <HBox GridPane.rowIndex="0" GridPane.columnIndex="0">
+            <Label styleClass="label-h2" text="Login"/>
+        </HBox>
+        
+        <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="emailTf" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <PasswordField prefWidth="250" fx:id="passwordTf" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <HBox alignment="center" GridPane.rowIndex="3" GridPane.columnIndex="0">
+        <Label fx:id="incorrectMsg" styleClass="label-error"/>
+    </HBox>
+   
+    <HBox alignment="center_right" GridPane.rowIndex="4" GridPane.columnIndex="0" spacing="10">
+            <Button styleClass="button" text="OK" onAction="#handleLoginCheck"/>
+            <Button styleClass="button" text="Cancel" onAction="#handleExit"/>
+    </HBox>
+        
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+    
+</GridPane>

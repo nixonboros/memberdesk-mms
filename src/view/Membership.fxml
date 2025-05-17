@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox fx:controller="controller.MembershipController" styleClass="background" prefHeight="400.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <GridPane alignment="CENTER">
+        <HBox GridPane.rowIndex="0" GridPane.columnIndex="0">
+            <Label styleClass="label-h2" text="Personal Details"/>
+        </HBox>
+
+        <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="nameTf" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="emailTf" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Phone:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="phoneTf" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="addressTf" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Separator GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Separator GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <HBox GridPane.rowIndex="6" GridPane.columnIndex="0">
+            <Label styleClass="label-h2" text="Membership Details"/>
+        </HBox>
+
+        <Label text="ID:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="idTf" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <Label text="Expense:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextField prefWidth="250" fx:id="expenseTf" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+        <Label text="Type:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <Label text="None" fx:id="typeTxt" prefWidth="250" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox alignment="CENTER" GridPane.rowIndex="10" spacing="10">
+        <Button styleClass="button" fx:id="addBtn" text="Add" onAction="#handleAdd"/>
+        <Button styleClass="button" fx:id="updateBtn" text="Update" onAction="#handleUpdate"/>
+        <Button styleClass="button" text="Close" onAction="#handleClose"/>
+    </HBox>
+
+    <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+    </padding>
+
+    <stylesheets>
+        <URL value="@mmsfx.css" />
+    </stylesheets>
+</VBox>

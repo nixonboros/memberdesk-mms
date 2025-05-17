@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<VBox alignment="center" prefHeight="500.0" prefWidth="700.0" spacing="10" styleClass="background" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SuperMarketController">
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="label-h2" text="Filters" translateY="-10"/>
+    </HBox>
+    <GridPane alignment="CENTER">
+        <HBox spacing="10">
+            <Label text="Name:" translateY="-5.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="nameTf" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Filter by name"/>
+
+            <Label text="Email:" translateY="-5.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="emailTf" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Filter by email"/>
+        </HBox>
+    </GridPane>
+
+    <Separator/>
+
+    <TableView fx:id="infoTv" items="${controller.superMarket.memberships}" prefHeight="320">
+        <placeholder>
+            <Text styleClass="label-opac" text="Memberships list is not loaded"/>
+        </placeholder>
+        <columns>
+            <TableColumn text="Name">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Email">
+                <cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Phone">
+                <cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Separator/>
+
+    <HBox alignment="center" spacing="10">
+        <Button onAction="#handleAdd" styleClass="button" text="Add" />
+        <Button fx:id="deleteBtn" onAction="#handleDelete" styleClass="button" text="Delete" />
+        <Button fx:id="selectBtn" onAction="#handleSelect" styleClass="button" text="Select" />
+        <Button fx:id="slipBtn" onAction="#handleSlip" styleClass="button" text="SLIP" />
+        <Button onAction="#handleReport" styleClass="button" text="Report" />
+        <Button onAction="#handleClose" styleClass="button" text="Close" />
+    </HBox>
+
+    <stylesheets>
+        <URL value="@mmsfx.css" />
+    </stylesheets>
+</VBox>

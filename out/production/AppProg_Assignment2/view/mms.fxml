@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="center" prefHeight="748.0" prefWidth="1300.0" spacing="10" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controller.MMSController">
+    <TableView fx:id="infoTv" prefHeight="748" items="${controller.MMS.memberships}">
+        <columns>
+            <TableColumn text="Name" >
+                <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Type">
+                <cellValueFactory><PropertyValueFactory property="type" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Expense" fx:id="expenseClm">
+                <cellValueFactory><PropertyValueFactory property="expense" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Credits" fx:id="creditsClm">
+                <cellValueFactory><PropertyValueFactory property="totalCredits" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="GasdeductionRate" fx:id="gasdeductionrateClm">
+                <cellValueFactory><PropertyValueFactory property="GasdeductionRate" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="DeductionRate" fx:id="deductionrateClm">
+                <cellValueFactory><PropertyValueFactory property="deductionRate" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="PayPerCredit" fx:id="paypercreditClm">
+                <cellValueFactory><PropertyValueFactory property="PayPerCredit" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="DollarAvailable" fx:id="dollaravailableClm">
+                <cellValueFactory><PropertyValueFactory property="DollarAvailable" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Separator />
+
+    <GridPane alignment="CENTER">
+        <Text styleClass="button" text="Total Expense:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label fx:id="totalexpenseText" prefWidth="150.0" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Text styleClass="button" text="AvgGasdeductionRate:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label fx:id="avggasdeductionrateText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Text styleClass="button" text="AvgPayPerCredit:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label fx:id="avgpaypercreditText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Text styleClass="button" text="Total Credits:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Label fx:id="totalcreditsText" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+        <Text styleClass="button" text="AvgDeductionRate:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label fx:id="avgdeductionrateText" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+        <Text styleClass="button" text="TotalDollarAvailable:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label fx:id="totaldollaravailableText" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <Separator />
+
+    <Button onAction="#handleClose" styleClass="button" text="Close" translateY="-5"/>
+
+    <stylesheets>
+        <URL value="@mmsfx.css" />
+    </stylesheets>
+</VBox>

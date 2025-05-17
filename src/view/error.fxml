@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<VBox fx:controller="controller.ErrorController" xmlns:fx="http://javafx.com/fxml/1"
+      alignment="center"
+      styleClass="background" spacing="10" prefHeight="300.0" prefWidth="350.0">
+
+    <Label alignment="CENTER" text="Form Validation Errors"/>
+    <VBox spacing="-10" alignment="CENTER">
+        <Label text="" fx:id="incorrectPattern"/>
+    </VBox>
+
+    <Button alignment="CENTER" styleClass="button" text="Okay" onAction="#handleClose"/>
+    <stylesheets>
+        <URL value="@mmsfx.css" />
+    </stylesheets>
+
+</VBox>
+

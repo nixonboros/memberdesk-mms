@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" prefHeight="338.0" prefWidth="550.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controller.MMSlipController">
+    <Label styleClass="label-h2" text="Membership Slip:" translateX="-35" translateY="-70" />
+
+    <GridPane alignment="CENTER" translateX="-30">
+        <Text styleClass="button" text="Total Credits:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label fx:id="totalcreditsText" prefWidth="102" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Text styleClass="button" text="Total Expense:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label fx:id="totalexpenseText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Text styleClass="button" text="Gasdeduction Rate:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label fx:id="gasdeductionrateText" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Text styleClass="button" text="Pay Per Credit:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label fx:id="paypercreditText" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+        <Text styleClass="button" text="Dollar Available:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label fx:id="dollaravailableText" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Text styleClass="button" text="Deduction Rate:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Label fx:id="deductionrateText" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+    </GridPane>
+
+    <Button onAction="#handleClose" styleClass="button" text="Close" GridPane.halignment="CENTER" GridPane.rowIndex="6" translateY="50"/>
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <stylesheets>
+        <URL value="@mmsfx.css" />
+    </stylesheets>
+</GridPane>
