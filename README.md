@@ -42,7 +42,7 @@ The application follows the Model-View-Controller (MVC) pattern:
 git clone https://github.com/nixonboros/membership-management-system.git
 ```
 
-2. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse)
+2. Open the project in your preferred IDE
 
 3. Build and run the application
 
