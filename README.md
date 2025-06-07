@@ -1,6 +1,6 @@
-# Membership Management System
+# MemberDesk - Membership Management System
 
-A robust desktop application for managing memberships, built with Java and JavaFX/FXML. This system implements the Model-View-Controller (MVC) architecture to ensure modularity, scalability, and maintainable code structure.
+A desktop-based supermarket loyalty program system that manages customer memberships, tracks spending, and calculates rewards across different membership tiers.. This system implements the Model-View-Controller (MVC) architecture to ensure modularity, scalability, and maintainable code structure.
 
 ## Features
 
